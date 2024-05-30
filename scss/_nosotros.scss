@@ -1,0 +1,86 @@
+/*comienzo pagina de nosotros*/
+.container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 0.9fr 1.1fr;
+  grid-auto-columns: 1fr;
+  gap: 5px 1px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "main aside1"
+    "main aside2";
+}
+
+.main {
+  grid-area: main;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: $bgVeishMedio;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+
+  .subtituloVideo {
+    margin-top: 30px;
+    color: #9e423b;
+  }
+
+  .subtituloMapa {
+    @extend .subtituloVideo;
+  }
+
+  .iframeVideo {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .iframeMapa {
+    @extend .iframeVideo;
+  }
+}
+
+/*empieza codigo de los aside*/
+.aside1 {
+  @include asideNosotros;
+
+  h2 {
+    text-align: center;
+    color: $bgRojo;
+    margin-top: 25px;
+  }
+
+  .team {
+    text-align: center;
+  }
+
+  p {
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.aside2 {
+  @include asideNosotros;
+  margin-bottom: 20px;
+
+  h2 {
+    margin-top: 16px;
+    text-align: center;
+    color: #9e423b;
+  }
+
+  h3 {
+    @extend h2;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .cafeteria {
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+}

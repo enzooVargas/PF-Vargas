@@ -1,0 +1,33 @@
+header{
+    background-color: $bgMarron;
+    .logo img {
+      padding: 10px;
+      width: 110px;
+      border-radius: 20px;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+.menu {
+      list-style-type: none;
+      display: flex;
+      padding: 20px;
+      a {
+        color:$bgblanco;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 14px;
+  
+        &:hover {
+          color: $bgVeishFuerte;
+        }
+      }
+    }
+    h1{
+        text-align: center;
+        background-color: $bgblanco;
+        font-size: 40px;
+    }
+  }

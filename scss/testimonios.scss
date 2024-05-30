@@ -1,0 +1,29 @@
+
+/*comienzo pagina de testimonios*/
+.mainTestimonios {
+    margin-bottom: 20px;
+  
+    .testimonios {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+  
+      img {
+        width: 300px;
+        border: 4px solid transparent;
+        border-radius: 20px;
+        transition: border-color 0.3s ease;
+  
+        &:hover {
+          border-color: $bgNegro;
+        }
+      }
+  
+      h3 {
+        color: $bgblanco;
+        text-align: center;
+        background-color: $bgMarron;
+        border-radius: 10px;
+      }
+    }
+  }

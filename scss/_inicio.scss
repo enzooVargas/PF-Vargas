@@ -1,0 +1,99 @@
+.containerInicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.9fr 1.1fr;
+    gap: 5px 5px;
+    grid-template-areas:
+      "main main"
+      "aside1 aside2";
+  }
+  
+  .mainInicio {
+    grid-area: main;
+    background-color: $bgblanco;
+  
+    h1 {
+      background-color: $bgblanco;
+      text-align: center;
+    }
+  }
+  
+  /*comienza codigo de los aside de la pagina inicio*/
+  .aside1Inicio {
+    grid-area: aside1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $bgVeish;
+    margin: 20px 10px 20px 10px ;
+    text-align: center;
+    border-radius: 10px;
+  
+    h2 {
+      margin-top: 20px;
+      text-align: center;
+      background-color: $bgRojo;
+    }
+  
+    h3 {
+      margin-top: 20px;
+      background-color: $bgVeishFuerte;
+    }
+  
+    .imgCafe {
+      margin-top: 30px;
+      text-align: center;
+  
+      img {
+        width: 38rem;
+      }
+    }
+  
+    .aside1Inicio p {
+      text-align: center;
+      padding: 10px;
+      font-size: 17px;
+    }
+  }
+  
+  .aside2Inicio {
+    grid-area: aside2;
+    background-color: $bgVeish;
+    margin: 20px 10px 20px 10px;
+    border-radius: 10px;
+  
+    h2 {
+      margin-top: 20px;
+      text-align: center;
+      background-color: $bgVeishFuerte;
+    }
+  
+    h3 {
+      margin-top: 20px;
+      text-align: center;
+      background-color: $bgRojo;
+    }
+  
+    img {
+      width: 250px;
+    }
+  
+    div {
+      border: double $bgRojo 1px;
+    }
+  
+    .contenedorImg {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    img {
+      opacity: .7;
+  
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  

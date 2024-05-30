@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="¡Contáctanos! Completa el formulario para enviarnos tus preguntas o comentarios. Encuentra información sobre nuestro equipo y nuestras redes sociales.">
+  <meta name="keywords"
+    content="Fauget, Contactos, formulario de contacto, equipo, redes sociales, Instagram, Facebook, Gmail, dirección, WhatsApp">
+  <!--dependencia a Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- link a favicon-->
+  <link rel="shortcut icon" href="../multimedia/favicon.png" type="image/x-icon">
+  <!--nuestro estilo css-->
+  <link rel="stylesheet" href="../css/estilo.css">
+  <title>Fauget_Contactos</title>
+</head>
+<body class="contactos-page">
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <img src="../img/logo.png" alt="imagen logo">
+      </div>
+      <ul class="menu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contactos.html">Contactos</a></li>
+        <li><a href="testimonios.html">Testimonios</a></li>
+      </ul>
+    </nav>
+    <h1>Contactos</h1>
+  </header>
+  <div class="contenedor">
+    <main class="mainContactos">
+      <section>
+        <h2>¡Contáctanos!</h2>
+        <p>¿Tienes alguna pregunta o comentario? ¡Nos encantaría escucharte! Completa el formulario con tus datos y
+          mensaje, y te responderemos pronto.</p>
+        <div>
+          <form>
+            <div>
+              <label for="nombre">Ingrese su nombre</label>
+              <input type="text" placeholder="Escribe tu nombre" name="nombre" id="nombre">
+            </div>
+            <br>
+            <div>
+              <label for="apellido">Ingrese su apellido</label>
+              <input type="text" placeholder="Escribe tu apellido" name="apellido" id="apellido">
+            </div>
+            <br>
+            <div>
+              <label for="email">*Ingrese su e-mail</label>
+              <input type="email" placeholder="Ingrese su email" name="email" id="email" required>
+            </div>
+            <br>
+            <div>
+              <label for="contraseña">*Ingrese su contraseña</label>
+              <input type="password" placeholder="Ingrese su contraseña" name="contraseña" id="contraseña" required>
+            </div>
+            <br>
+            <div>
+              <label>Seleccione su genero</label>
+              <input type="radio" name="hombre">Hombre
+              <input type="radio" name="mujer">Mujer
+              <input type="radio" name="otro">Otro
+            </div>
+            <br>
+            <div>
+              <label for="pais">Selecciona su pais de residencia</label>
+              <select name="pais" id="pais">
+                <option value="Argentina">Argentina</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Aparaguay">Paraguay</option>
+              </select>
+            </div>
+            <br>
+            <div>
+              <label for="comentarios">Escribe tus comentarios</label>
+              <br>
+              <textarea name="comentarios" class="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+            </div>
+            <br>
+            <input class="boton" type="submit" value="Enviar formulario">
+            <input class="boton" type="reset" value="Borrar campos">
+          </form>
+        </div>
+      </section>
+    </main>
+    <aside class="aside1Contactos">
+      <h2>Información sobre nuestros empleados</h2>
+      <p>Aquí encontrarás información sobre nuestros empleados, incluyendo sus perfiles. ¡Descubre quiénes son las
+        personas que hacen posible nuestro éxito.</p>
+      <section>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Empleado</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Edad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Felipe</td>
+              <td>Gonzales</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Maria</td>
+              <td>Perez</td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Javier</td>
+              <td>Olivo</td>
+              <td>27</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </aside>
+    <!--Comienzo de aside 2-->
+    <aside class="aside2Contactos">
+      <section class="acordeon">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Instagram
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Encuentra nuestras últimas novedades en Instagram!
+                  @Fauget_Cafeteria.
+                  <img src="../img/instagram.png" alt="icono de instagram">
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Facebook
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Únete a nuestra comunidad en Facebook para promociones especiales y eventos. Encuéntranos en
+                  Facebook como Fauget_Cafeteria.
+                  <img src="../img/facebook.png" alt="icono de facebook">
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Gmail
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Estamos aquí para ayudarte, no dudes en escribirnos a nuestro correo electrónico:
+                  Fauget@gmail.com.
+                  <img src="../img/gmail.png" alt="icono de gmail">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h3 class="h3Animacion">haz click en la parte de arriba↑</h3>
+      <p>!!Podras enterarte de como encontrarnos en cada red social!!</p>
+    </aside>
+  </div>
+  <footer>
+    <ul class="icono">
+      <li class="icon-eleme">
+        <a href="https://web.whatsapp.com/" class="icon" target="_blank">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+      </li>
+      <li class="icon-eleme">
+        <a href="https://www.instagram.com/" class="icon" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </li>
+      <li class="icon-eleme">
+        <a href="https://es-la.facebook.com/login/device-based/regular/login/" class="icon" target="_blank">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+      </li>
+      <li class="icon-eleme">
+        <a href="https://www.google.com/intl/es-419/gmail/about/" class="icon" target="_blank">
+          <ion-icon name="mail-outline"></ion-icon>
+        </a>
+      </li>
+    </ul>
+    <ul class="menu">
+      <li class="menu-elem">
+        <a href="" class="menu-icon">Inicio</a>
+      </li>
+      <li class="menu-elem">
+        <a href="" class="menu-icon">Novedades</a>
+      </li>
+      <li class="menu-elem">
+        <a href="" class="menu-icon">dirección</a>
+      </li>
+      <li class="menu-elem">
+        <a href="" class="menu-icon">Sobre nosotros</a>
+      </li>
+    </ul>
+    <p class="texto">Todos los derechos reservados</p>
+  </footer>
+  <!--dependencia a iconos-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!--dependecia a bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

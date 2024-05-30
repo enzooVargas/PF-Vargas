@@ -1,0 +1,40 @@
+@mixin cards{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    .card{
+        background-color:$bgblanco;
+        color:$bgRojo;
+        &:hover{
+            transition: all 2s;
+            transform:translate(-10px,-20px);
+            background-color: $bgVeishMedio;
+        } 
+        flex: 1 1 calc(33.333% - 20px); 
+        max-width: calc(33.333% - 110px);
+        @media (max-width: 1140px) {
+            flex: 1 1 calc(50% - 20px); 
+            max-width: calc(50% - 20px);
+        }
+        @media (max-width: 600px) {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+    }
+}
+@mixin asideNosotros{
+    background-color: $bgVeishMedio;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+@mixin asideContactos{
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color:$bgVeish;
+}

@@ -1,0 +1,23 @@
+/*comienzo de pagina productos card*/
+.mainProductos {
+    h5 {
+      text-align: center;
+      border-radius: 10px;
+      padding: 5px;
+      background-color: $bgRojo;
+      color: $bgNegro;
+    }
+  
+    .cards-productos {
+      @include cards;
+      display: flex;
+    }
+  
+    .btn {
+      background-color: $bgRojo;
+  
+      &:hover {
+        color: $bgblanco;
+      }
+    }
+  }
