@@ -1,116 +1,145 @@
 /*comienzo pagina de contactos*/
 .contenedor {
-    display: grid;
-    margin-bottom: 20px;
-    grid-template-columns: 1.1fr 0.9fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 5px 1px;
-    grid-template-areas:
-      "main aside1"
-      "main aside2";
-  }
-  
-  .mainContactos {
-    grid-area: main;
-    background-color: $bgVeish;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 10px;
-  
-    section {
-      text-align: center;
-  
-      h2 {
-        color: $bgNegro;
-        background-color: $bgRojo;
-        border-radius: 10px;
-      }
-  
-      p {
-        font-size: 20px;
-        color: $bgNegro;
-      }
-  
-      .boton {
-        margin-bottom: 20px;
-        color: $bgblanco;
-        background-color: $bgRojo;
-        padding: 5px;
-        border-radius: 10px;
-  
-        &:hover {
-          background-color: $bgVeishFuerte;
-          color: $bgNegro;
-        }
-      }
-  
-      label {
-        text-align: center;
-        color: $bgRojo;
-        padding: 5px;
-        font-size: 17px;
-      }
-    }
-  }
-  
-  .aside1Contactos {
-    grid-area: aside1;
-    @include asideContactos;
-  
+  display: grid;
+  margin-bottom: 20px;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px 1px;
+  grid-template-areas:
+    "main aside1"
+    "main aside2";
+}
+
+.mainContactos {
+  grid-area: main;
+  background-color: $bgVeish;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 10px;
+
+  section {
+    text-align: center;
+
     h2 {
-      text-align: center;
       color: $bgNegro;
-      background-color: $bgVeishMedio;
+      background-color: $bgRojo;
       border-radius: 10px;
-  
     }
-  
+
     p {
-      text-align: center;
       font-size: 20px;
       color: $bgNegro;
     }
-  
-    table {
-      border: solid #9e423b 2px;
+    .formulario{
+      margin-top: 30px;
     }
-  }
-  
-  .aside2Contactos {
-    @include asideContactos;
-  
-    h2 {
+    .boton {
+      margin-bottom: 20px;
+      color: $bgblanco;
+      background-color: $bgRojo;
+      padding: 5px;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: $bgVeishFuerte;
+        color: $bgNegro;
+      }
+    }
+
+    label {
       text-align: center;
       color: $bgRojo;
+      padding: 5px;
+      font-size: 17px;
     }
-  
-    h3 {
-      @extend h2;
-    }
-  
-    p {
-      text-align: center;
-      font-size: 18px;
+    .formularioComentario{
+      p{
+        @extend label;
+        margin-top: 30px;
+      }
     }
   }
-  
+}
+
+.aside1Contactos {
+  grid-area: aside1;
+  @include asideContactos;
+
+  h2 {
+    text-align: center;
+    color: $bgNegro;
+    background-color: $bgVeishMedio;
+    border-radius: 10px;
+
+  }
+
+  p {
+    text-align: center;
+    font-size: 20px;
+    color: $bgNegro;
+  }
+
+  table {
+    border: solid #9e423b 2px;
+  }
+}
+
+.aside2Contactos {
+  @include asideContactos;
+
+  h2 {
+    text-align: center;
+    color: $bgRojo;
+  }
+
+  h3 {
+    @extend h2;
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
+  }
+
   .h3Animacion {
     animation-name: aparece;
     animation-iteration-count: infinite;
     animation-duration: 2s;
   }
-  
+
   @keyframes aparece {
     0% {
       opacity: 0;
     }
-  
+
     50% {
       opacity: 1;
     }
-  
+
     100% {
       opacity: 0;
     }
   }
+
+  .acordeon {
+    .accordion-button {
+      background-color: $bgRojo;
+      /*cambia el color del fondo del boton*/
+      color: $bgNegro;
+
+      /*cambia el color del texto*/
+      &:hover {
+        background-color: $bgVeishMedio;
+        /*cambia el color de fondo del boton cuando se pasa el mouse por encima */
+      }
+
+    }
+  }
+
+  .acordeon .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem $bgVeishFuerte;
+    /* Cambia el color del borde cuando el botón está enfocado */
+  }
+}

@@ -1,3 +1,4 @@
+/* mixin pagina de Productos*/
 @mixin cards{
     margin-top: 50px;
     display: flex;
@@ -17,24 +18,36 @@
         max-width: calc(33.333% - 110px);
         @media (max-width: 1140px) {
             flex: 1 1 calc(50% - 20px); 
-            max-width: calc(50% - 20px);
+            max-width: calc(40% - 20px);
         }
         @media (max-width: 600px) {
             flex: 1 1 100%;
-            max-width: 100%;
+            max-width: 60%;
         }
     }
 }
+/*mixin pagina de Nosotros*/
 @mixin asideNosotros{
-    background-color: $bgVeishMedio;
+    background-color: $bgVeish;
     margin-left: 10px;
     margin-right: 10px;
+    padding: 10px;
     border-radius: 10px;
     margin-top: 20px;
 }
+/*mixin pagina de Contactos*/
 @mixin asideContactos{
     margin-top: 10px;
     margin-right: 10px;
     border-radius: 10px;
+    padding: 10px;
     background-color:$bgVeish;
+}
+/*este mixin lo va a utilizar los parrafos de la pagina de Incio como tambien los parrafos de la pagina de "Nosotros"*/
+@mixin parrafoInicio_Nosotros{
+      margin-top: 20px;
+      font-size: 20px;
+      padding: 10px;
+      background-color: $bgRojo;
+      border-radius: 10px
 }

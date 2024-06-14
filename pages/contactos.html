@@ -20,7 +20,7 @@
   <header>
     <nav class="nav">
       <div class="logo">
-        <img src="../img/logo.png" alt="imagen logo">
+        <img src="../img/logo.png" alt="Diseño de logo con una taza de café marrón elegante y simple">
       </div>
       <ul class="menu">
         <li><a href="../index.html">Inicio</a></li>
@@ -40,34 +40,29 @@
           mensaje, y te responderemos pronto.</p>
         <div>
           <form>
-            <div>
+            <div class="formulario" >
               <label for="nombre">Ingrese su nombre</label>
               <input type="text" placeholder="Escribe tu nombre" name="nombre" id="nombre">
             </div>
-            <br>
-            <div>
+            <div class="formulario" >
               <label for="apellido">Ingrese su apellido</label>
               <input type="text" placeholder="Escribe tu apellido" name="apellido" id="apellido">
             </div>
-            <br>
-            <div>
+            <div class="formulario" >
               <label for="email">*Ingrese su e-mail</label>
               <input type="email" placeholder="Ingrese su email" name="email" id="email" required>
             </div>
-            <br>
-            <div>
+            <div class="formulario" >
               <label for="contraseña">*Ingrese su contraseña</label>
               <input type="password" placeholder="Ingrese su contraseña" name="contraseña" id="contraseña" required>
             </div>
-            <br>
-            <div>
+            <div class="formulario" >
               <label>Seleccione su genero</label>
               <input type="radio" name="hombre">Hombre
               <input type="radio" name="mujer">Mujer
               <input type="radio" name="otro">Otro
             </div>
-            <br>
-            <div>
+            <div class="formulario" >
               <label for="pais">Selecciona su pais de residencia</label>
               <select name="pais" id="pais">
                 <option value="Argentina">Argentina</option>
@@ -76,13 +71,10 @@
                 <option value="Aparaguay">Paraguay</option>
               </select>
             </div>
-            <br>
-            <div>
-              <label for="comentarios">Escribe tus comentarios</label>
-              <br>
+            <div class="formularioComentario" >
+             <p>Escribe tus comentarios</p>
               <textarea name="comentarios" class="comentarios" id="comentarios" cols="30" rows="10"></textarea>
             </div>
-            <br>
             <input class="boton" type="submit" value="Enviar formulario">
             <input class="boton" type="reset" value="Borrar campos">
           </form>
@@ -228,5 +220,4 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 </body>
-
 </html>

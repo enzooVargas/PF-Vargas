@@ -15,7 +15,8 @@
   grid-area: main;
   margin-left: 10px;
   margin-right: 10px;
-  background-color: $bgVeishMedio;
+  padding: 10px;
+  background-color: $bgVeish;
   margin-top: 20px;
   border-radius: 10px;
   text-align: center;
@@ -23,7 +24,7 @@
 
   .subtituloVideo {
     margin-top: 30px;
-    color: #9e423b;
+    color: $bgRojo;
   }
 
   .subtituloMapa {
@@ -33,10 +34,26 @@
   .iframeVideo {
     margin-top: 20px;
     text-align: center;
+
+    iframe {
+      width: 80%;
+      height: 450px;
+      border: 0;
+    }
   }
 
   .iframeMapa {
     @extend .iframeVideo;
+
+    iframe {
+      width: 80%;
+      height: 450px;
+      border: 0;
+    }
+
+    p {
+      @include parrafoInicio_Nosotros
+    }
   }
 }
 
@@ -55,7 +72,7 @@
   }
 
   p {
-    font-size: 17px;
+    @include parrafoInicio_Nosotros;
     text-align: center;
     margin-bottom: 20px;
   }
@@ -73,6 +90,7 @@
 
   h3 {
     @extend h2;
+    font-size: 40px;
   }
 
   p {
@@ -80,6 +98,7 @@
   }
 
   .cafeteria {
+    text-align: center;
     margin-bottom: 15px;
     padding: 10px;
   }

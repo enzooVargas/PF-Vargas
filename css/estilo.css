@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* mixin pagina de Productos*/
+/*mixin pagina de Nosotros*/
+/*mixin pagina de Contactos*/
+/*este mixin lo va a utilizar los parrafos de la pagina de Incio como tambien los parrafos de la pagina de "Nosotros"*/
 * {
   margin: 0;
   padding: 0;
@@ -71,6 +75,7 @@ header h1 {
   justify-content: center;
   background-color: #faebd7;
   margin: 20px 10px 20px 10px;
+  padding: 10px;
   text-align: center;
   border-radius: 10px;
 }
@@ -90,7 +95,13 @@ header h1 {
 .aside1Inicio .imgCafe img {
   width: 38rem;
 }
-.aside1Inicio .aside1Inicio p {
+.aside1Inicio p {
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #9e423b;
+  border-radius: 10px;
+  color: #000000;
   text-align: center;
   padding: 10px;
   font-size: 17px;
@@ -100,6 +111,7 @@ header h1 {
   grid-area: aside2;
   background-color: #faebd7;
   margin: 20px 10px 20px 10px;
+  padding: 10px;
   border-radius: 10px;
 }
 .aside2Inicio h2, .aside2Inicio .aside2Contactos h3, .aside2Contactos .aside2Inicio h3, .aside2Inicio .aside2 h3, .aside2 .aside2Inicio h3 {
@@ -209,20 +221,28 @@ footer .texto {
 @media (max-width: 1140px) {
   .mainProductos .cards-productos .card {
     flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
+    max-width: calc(40% - 20px);
   }
 }
 @media (max-width: 600px) {
   .mainProductos .cards-productos .card {
     flex: 1 1 100%;
-    max-width: 100%;
+    max-width: 60%;
   }
+}
+.mainProductos .cards-productos .cards {
+  width: 18rem;
 }
 .mainProductos .btn {
   background-color: #9e423b;
 }
 .mainProductos .btn:hover {
   color: #ffffff;
+}
+.mainProductos .card:nth-child(n+4) {
+  /*esta propiedad permite seleccionar el elemento que quiero,selecciona desde el 4to elemento hasta el ultimo*/
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /*comienzo pagina de nosotros*/
@@ -240,7 +260,8 @@ footer .texto {
   grid-area: main;
   margin-left: 10px;
   margin-right: 10px;
-  background-color: #deb481;
+  padding: 10px;
+  background-color: #faebd7;
   margin-top: 20px;
   border-radius: 10px;
   text-align: center;
@@ -254,11 +275,30 @@ footer .texto {
   margin-top: 20px;
   text-align: center;
 }
+.main .iframeVideo iframe, .main .iframeMapa iframe {
+  width: 80%;
+  height: 450px;
+  border: 0;
+}
+.main .iframeMapa iframe {
+  width: 80%;
+  height: 450px;
+  border: 0;
+}
+.main .iframeMapa p {
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #9e423b;
+  border-radius: 10px;
+}
+
 /*empieza codigo de los aside*/
 .aside1 {
-  background-color: #deb481;
+  background-color: #faebd7;
   margin-left: 10px;
   margin-right: 10px;
+  padding: 10px;
   border-radius: 10px;
   margin-top: 20px;
 }
@@ -271,15 +311,20 @@ footer .texto {
   text-align: center;
 }
 .aside1 p {
-  font-size: 17px;
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #9e423b;
+  border-radius: 10px;
   text-align: center;
   margin-bottom: 20px;
 }
 
 .aside2 {
-  background-color: #deb481;
+  background-color: #faebd7;
   margin-left: 10px;
   margin-right: 10px;
+  padding: 10px;
   border-radius: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -289,10 +334,14 @@ footer .texto {
   text-align: center;
   color: #9e423b;
 }
+.aside2 h3 {
+  font-size: 40px;
+}
 .aside2 p {
   text-align: center;
 }
 .aside2 .cafeteria {
+  text-align: center;
   margin-bottom: 15px;
   padding: 10px;
 }
@@ -313,6 +362,7 @@ footer .texto {
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  padding: 10px;
   border-radius: 10px;
 }
 .mainContactos section {
@@ -327,6 +377,9 @@ footer .texto {
   font-size: 20px;
   color: #000000;
 }
+.mainContactos section .formulario {
+  margin-top: 30px;
+}
 .mainContactos section .boton {
   margin-bottom: 20px;
   color: #ffffff;
@@ -338,11 +391,14 @@ footer .texto {
   background-color: #fcc174;
   color: #000000;
 }
-.mainContactos section label {
+.mainContactos section label, .mainContactos section .formularioComentario p {
   text-align: center;
   color: #9e423b;
   padding: 5px;
   font-size: 17px;
+}
+.mainContactos section .formularioComentario p {
+  margin-top: 30px;
 }
 
 .aside1Contactos {
@@ -350,6 +406,7 @@ footer .texto {
   margin-top: 10px;
   margin-right: 10px;
   border-radius: 10px;
+  padding: 10px;
   background-color: #faebd7;
 }
 .aside1Contactos h2, .aside1Contactos .aside2Contactos h3, .aside2Contactos .aside1Contactos h3, .aside1Contactos .aside2 h3, .aside2 .aside1Contactos h3 {
@@ -371,6 +428,7 @@ footer .texto {
   margin-top: 10px;
   margin-right: 10px;
   border-radius: 10px;
+  padding: 10px;
   background-color: #faebd7;
 }
 .aside2Contactos h2, .aside2Contactos h3 {
@@ -381,13 +439,11 @@ footer .texto {
   text-align: center;
   font-size: 18px;
 }
-
-.h3Animacion {
+.aside2Contactos .h3Animacion {
   animation-name: aparece;
   animation-iteration-count: infinite;
   animation-duration: 2s;
 }
-
 @keyframes aparece {
   0% {
     opacity: 0;
@@ -399,6 +455,21 @@ footer .texto {
     opacity: 0;
   }
 }
+.aside2Contactos .acordeon .accordion-button {
+  background-color: #9e423b;
+  /*cambia el color del fondo del boton*/
+  color: #000000;
+  /*cambia el color del texto*/
+}
+.aside2Contactos .acordeon .accordion-button:hover {
+  background-color: #deb481;
+  /*cambia el color de fondo del boton cuando se pasa el mouse por encima */
+}
+.aside2Contactos .acordeon .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem #fcc174;
+  /* Cambia el color del borde cuando el botón está enfocado */
+}
+
 /*comienzo pagina de testimonios*/
 .mainTestimonios {
   margin-bottom: 20px;
@@ -466,10 +537,10 @@ footer .texto {
 }
 @media only screen and (max-width: 486px) {
   .mainInicio {
-    width: 100vw;
+    width: 100%;
   }
   .aside1Inicio {
-    width: 90vw;
+    width: 90%;
     margin-left: 5vw;
   }
   .aside1Inicio .imgCafe {
@@ -477,7 +548,7 @@ footer .texto {
     text-align: center;
   }
   .aside1Inicio .imgCafe img {
-    width: 90vw;
+    width: 90%;
   }
   .aside2Inicio {
     width: 90vw;
@@ -524,7 +595,7 @@ footer .texto {
   }
 }
 /*media queries de productos*/
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 665px) {
   .productos-page header .nav {
     flex-direction: column;
     align-items: center;
@@ -560,7 +631,7 @@ footer .texto {
   }
 }
 /*media queries pagina de nosotros*/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1138px) {
   .container {
     grid-template-columns: 1.2fr;
     grid-template-rows: 1fr 1fr 1.1fr;
@@ -607,7 +678,7 @@ footer .texto {
     margin-bottom: 15px;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 662px) {
   .container {
     display: block;
     padding: 10px;
@@ -620,15 +691,9 @@ footer .texto {
     width: 100%;
     margin-bottom: 20px;
   }
-  .iframeVideo iframe, .main .iframeMapa iframe,
-  .iframeMapa iframe {
-    width: 100%;
-    height: auto;
-  }
   .team img,
   .cafeteria img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
   }
   .nosotros-page header .nav {
     flex-direction: column;
@@ -664,15 +729,30 @@ footer .texto {
     font-size: 14px;
   }
 }
-@media only screen and (max-width: 480px) {
-  .aside1 .team img {
-    max-width: 300px;
-    /*limite el tamaño de la imagen para que no sobre salga*/
+@media only screen and (max-width: 550px) {
+  .main .iframeVideo iframe, .main .iframeMapa iframe {
+    width: 80%;
+    height: 300px;
+  }
+  .main .iframeMapa iframe {
+    width: 80%;
+    height: 300px;
   }
 }
-@media only screen and (max-width: 320px) {
-  .aside1 .team img {
-    max-width: 200px;
+@media only screen and (max-width: 380px) {
+  .main .iframeVideo iframe, .main .iframeMapa iframe {
+    width: 80%;
+    height: 200px;
+  }
+  .main .iframeMapa iframe {
+    width: 80%;
+    height: 200px;
+  }
+  .main .iframeMapa p {
+    font-size: 15px;
+  }
+  .parrafoAside1 p {
+    font-size: 15px;
   }
 }
 /*media queries de pagina contactos*/
@@ -689,7 +769,7 @@ footer .texto {
     margin-right: 5vw;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 667px) {
   .contactos-page header {
     width: 100vw;
   }

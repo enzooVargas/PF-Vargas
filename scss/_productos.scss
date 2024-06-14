@@ -1,23 +1,32 @@
 /*comienzo de pagina productos card*/
 .mainProductos {
-    h5 {
-      text-align: center;
-      border-radius: 10px;
-      padding: 5px;
-      background-color: $bgRojo;
-      color: $bgNegro;
-    }
-  
-    .cards-productos {
-      @include cards;
-      display: flex;
-    }
-  
-    .btn {
-      background-color: $bgRojo;
-  
-      &:hover {
-        color: $bgblanco;
-      }
+  h5 {
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: $bgRojo;
+    color: $bgNegro;
+  }
+
+  .cards-productos {
+    @include cards;
+    display: flex;
+    .cards{
+      width: 18rem;
     }
   }
+
+  .btn {
+    background-color: $bgRojo;
+
+    &:hover {
+      color: $bgblanco;
+    }
+  }
+
+  .card:nth-child(n+4) {
+    /*esta propiedad permite seleccionar el elemento que quiero,selecciona desde el 4to elemento hasta el ultimo*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
